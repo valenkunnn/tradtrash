@@ -30,11 +30,8 @@
         }
 
         main {
-            padding: 20px;
+            padding: 30px;
             min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* centra todo */
         }
 
         footer {
@@ -44,31 +41,44 @@
             font-size: 14px;
         }
 
-        /* BOTÓN PRO */
-        .btn-tattoos {
-            margin-top: 40px;
-            text-align: center;
+        /* CONTENEDOR DE BOTONES */
+        .grid-botones {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+            gap: 25px;
+            max-width: 900px;
+        }
+
+        /* BOTÓN */
+        .btn {
             text-decoration: none;
             color: white;
         }
 
-        .btn-tattoos img {
-            width: 280px;
-            height: 280px; /* cuadrado */
+        .btn img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
             object-fit: cover;
             border-radius: 15px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .btn-tattoos span {
+        .btn span {
             display: block;
             margin-top: 10px;
             font-size: 18px;
         }
 
-        .btn-tattoos:hover img {
+        .btn:hover img {
             transform: scale(1.07);
             box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+        }
+
+        /* RESPONSIVE (celular = 1 por fila) */
+        @media (max-width: 600px) {
+            .grid-botones {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -81,13 +91,23 @@
     </header>
 
     <main>
-        <h2>Bienvenido</h2>
+        <h2>soy joy y hago dibujitos</h2>
 
-        <!-- BOTÓN TATTOOS -->
-        <a href="tattoos.html" class="btn-tattoos">
-            <img src="tattoo2.jfif" alt="Tattoos">
-            <span>Tattoos</span>
-        </a>
+        <div class="grid-botones">
+
+            <!-- BOTÓN TATTOOS -->
+            <a href="tattoos.html" class="btn">
+                <img src="tattoo2.jfif" alt="Tattoos">
+                <span>Tattoos</span>
+            </a>
+
+            <!-- BOTÓN DISEÑOS -->
+            <a href="disenos.html" class="btn">
+                <img src="diseño2.jfij" alt="Diseños">
+                <span>Diseños</span>
+            </a>
+
+        </div>
 
     </main>
 
