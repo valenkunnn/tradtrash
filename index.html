@@ -25,13 +25,16 @@
             position: absolute;
             top: 15px;
             right: 20px;
-            width: 120px;
+            width: 100px;
             height: auto;
         }
 
         main {
             padding: 20px;
             min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centra todo */
         }
 
         footer {
@@ -41,31 +44,31 @@
             font-size: 14px;
         }
 
-        /* Botón con imagen */
+        /* BOTÓN PRO */
         .btn-tattoos {
-            display: inline-block;
-            cursor: pointer;
-            margin-top: 20px;
+            margin-top: 40px;
             text-align: center;
             text-decoration: none;
+            color: white;
         }
 
         .btn-tattoos img {
-            width: 200px;
-            border-radius: 10px;
-            display: block;
+            width: 280px;
+            height: 280px; /* cuadrado */
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .btn-tattoos span {
             display: block;
-            margin-top: 8px;
-            font-size: 16px;
-            color: white;
+            margin-top: 10px;
+            font-size: 18px;
         }
 
-        .btn-tattoos:hover {
-            transform: scale(1.05);
-            transition: 0.3s;
+        .btn-tattoos:hover img {
+            transform: scale(1.07);
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
         }
     </style>
 </head>
@@ -80,9 +83,9 @@
     <main>
         <h2>Bienvenido</h2>
 
-        <!-- BOTÓN TATTOOS FUNCIONANDO -->
+        <!-- BOTÓN TATTOOS -->
         <a href="tattoos.html" class="btn-tattoos">
-            <img src="IMG_20230824_161153063.jpg" alt="Tattoos">
+            <img src="tattoo2.jfif" alt="Tattoos">
             <span>Tattoos</span>
         </a>
 
