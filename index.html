@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tattoos - tradtrash</title>
+    <title>tradtrash</title>
 
     <style>
         body {
@@ -31,25 +31,7 @@
 
         main {
             padding: 20px;
-        }
-
-        /* Galería PRO */
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 15px;
-        }
-
-        .galeria img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover; /* evita que se deformen */
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .galeria img:hover {
-            transform: scale(1.05);
+            min-height: 80vh;
         }
 
         footer {
@@ -59,12 +41,31 @@
             font-size: 14px;
         }
 
-        .volver {
+        /* Botón con imagen */
+        .btn-tattoos {
             display: inline-block;
-            margin-bottom: 20px;
-            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
             text-decoration: none;
-            font-size: 14px;
+        }
+
+        .btn-tattoos img {
+            width: 200px;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .btn-tattoos span {
+            display: block;
+            margin-top: 8px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .btn-tattoos:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -77,18 +78,14 @@
     </header>
 
     <main>
-        <a href="index.html" class="volver">← Volver</a>
+        <h2>Bienvenido</h2>
 
-        <h2>Tattoos</h2>
+        <!-- BOTÓN TATTOOS FUNCIONANDO -->
+        <a href="tattoos.html" class="btn-tattoos">
+            <img src="IMG_20230824_161153063.jpg" alt="Tattoos">
+            <span>Tattoos</span>
+        </a>
 
-        <div class="galeria">
-            <img src="ajies.jpg">
-            <img src="IMG_20230824_161153063.jpg">
-            <img src="IMG_20231129_014848647.jpg">
-            <img src="IMG_20240930_131412_733.webp">
-            <img src="IMG_20250423_215036387.jpg">
-            <img src="IMG_20241229_231802741.jpg">
-        </div>
     </main>
 
     <footer>
