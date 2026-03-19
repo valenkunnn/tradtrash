@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diseños - tradtrash</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #5a0000;
+            color: white;
+        }
+
+        header {
+            position: relative;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .logo {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        /* BOTÓN VOLVER */
+        .volver {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border: 1px solid white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .volver:hover {
+            background-color: white;
+            color: #5a0000;
+        }
+
+        /* GALERÍA GRANDE */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .galeria img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            background-color: #3a3a3a;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>tradtrash</h1>
+        <img src="diablo tradtrash.png" alt="logo" class="logo">
+    </header>
+
+    <main>
+
+        <a href="index.html" class="volver">← Volver</a>
+
+        <h2>Diseños</h2>
+
+        <div class="galeria">
+            <img src="diseño1.jfif">
+            <img src="diseño2.jfif">
+            <img src="diseño3.jfif">
+            <img src="diseño4.jfif">
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 FISURAS S.A ® - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
